@@ -2,6 +2,7 @@ package com.pilkom.algopintar
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         playAnimation()
+
+        binding.btnStart.setOnClickListener {
+            startActivity(Intent(this@MainActivity, IdentitasActivity::class.java))
+        }
     }
 
     private fun playAnimation() {
@@ -37,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             val showTvState =
                 ObjectAnimator.ofFloat(binding.tvState, View.ALPHA, 1f).setDuration(500)
             val showImgStart =
-                ObjectAnimator.ofFloat(binding.imgStart, View.ALPHA, 1f).setDuration(500)
+                ObjectAnimator.ofFloat(binding.btnStart, View.ALPHA, 1f).setDuration(500)
 
             AnimatorSet().apply {
                 playTogether(hideProgressBar, hideIconApp, hideTvState)
