@@ -12,7 +12,7 @@
         android:theme="@style/Theme.AlgoPintar"
         tools:targetApi="31">
         <activity
-            android:name=".HomepageActivity"
+            android:name=".LeaderboardActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -22,13 +22,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".HomepageActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
+        <activity
             android:name=".IdentitasActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
