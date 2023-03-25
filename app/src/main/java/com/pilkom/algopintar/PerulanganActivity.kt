@@ -1,18 +1,13 @@
 package com.pilkom.algopintar
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import com.pilkom.algopintar.databinding.ActivityIdentitasBinding
-import com.pilkom.algopintar.databinding.ActivityMainBinding
 
-class IdentitasActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityIdentitasBinding
+class PerulanganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityIdentitasBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+        setContentView(R.layout.activity_perulangan)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
