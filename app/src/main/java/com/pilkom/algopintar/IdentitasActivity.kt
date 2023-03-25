@@ -1,5 +1,6 @@
 package com.pilkom.algopintar
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,9 @@ class IdentitasActivity : AppCompatActivity() {
         binding = ActivityIdentitasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnSelesai.setOnClickListener {
+            startActivity(Intent(this@IdentitasActivity, HomepageActivity::class.java))
+        }
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {

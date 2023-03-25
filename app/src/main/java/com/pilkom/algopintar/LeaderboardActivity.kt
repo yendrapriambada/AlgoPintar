@@ -1,13 +1,23 @@
 package com.pilkom.algopintar
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.pilkom.algopintar.databinding.ActivityHomepageBinding
+import com.pilkom.algopintar.databinding.ActivityLeaderboardBinding
 
 class LeaderboardActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLeaderboardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_leaderboard)
+        binding = ActivityLeaderboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.include.btnBack.setOnClickListener {
+            startActivity(Intent(this@LeaderboardActivity, HomepageActivity::class.java))
+            finish()
+        }
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
