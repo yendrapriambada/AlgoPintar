@@ -17,8 +17,8 @@
         android:scaleType="fitXY"
         android:src="@drawable/backdrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_keluar"
+        app:layout_constraintStart_toEndOf="@+id/btn_setting"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -34,22 +34,22 @@
         app:layout_constraintTop_toTopOf="@+id/img_backdrop" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/bg_menu"
-        android:padding="4dp"
-        android:src="@drawable/baseline_settings_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/btn_setting"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/bg_menu"
+        android:padding="4dp"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintEnd_toEndOf="@+id/tv_menu"
+        app:layout_constraintStart_toStartOf="@+id/tv_menu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu" />
+
+    <ImageView
+        android:id="@+id/btn_petunjuk"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_menu2"
         android:padding="4dp"
         android:src="@drawable/baseline_help_24"
@@ -58,10 +58,10 @@
         app:layout_constraintTop_toBottomOf="@id/tv_setting" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/btn_kompetensi"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_menu"
         android:padding="4dp"
         android:src="@drawable/baseline_menu_book_24"
@@ -70,10 +70,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_petunjuk" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/btn_profile"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_menu2"
         android:padding="4dp"
         android:src="@drawable/baseline_person_24"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_kompetensi" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/btn_keluar"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btn_home"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
@@ -112,9 +112,9 @@
         android:layout_marginTop="2dp"
         android:text="Setting"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_setting"
+        app:layout_constraintStart_toStartOf="@+id/btn_setting"
+        app:layout_constraintTop_toBottomOf="@+id/btn_setting" />
 
     <TextView
         android:id="@+id/tv_keluar"
@@ -123,9 +123,9 @@
         android:layout_marginTop="2dp"
         android:text="Keluar"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_keluar"
+        app:layout_constraintStart_toStartOf="@+id/btn_keluar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_keluar" />
 
     <TextView
         android:id="@+id/tv_home"
@@ -135,9 +135,9 @@
         android:gravity="center"
         android:text="Home"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_home"
+        app:layout_constraintStart_toStartOf="@+id/btn_home"
+        app:layout_constraintTop_toBottomOf="@+id/btn_home" />
 
     <TextView
         android:id="@+id/tv_petunjuk"
@@ -146,9 +146,9 @@
         android:layout_marginTop="2dp"
         android:text="Petunjuk"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_petunjuk"
+        app:layout_constraintStart_toStartOf="@+id/btn_petunjuk"
+        app:layout_constraintTop_toBottomOf="@+id/btn_petunjuk" />
 
     <TextView
         android:id="@+id/tv_kompetensi"
@@ -157,9 +157,9 @@
         android:layout_marginTop="2dp"
         android:text="Kompetensi"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_kompetensi"
+        app:layout_constraintStart_toStartOf="@+id/btn_kompetensi"
+        app:layout_constraintTop_toBottomOf="@+id/btn_kompetensi" />
 
     <TextView
         android:id="@+id/tv_profil"
@@ -168,8 +168,31 @@
         android:layout_marginTop="2dp"
         android:text="Profil"
         android:textColor="@color/material_dynamic_neutral20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_profile"
+        app:layout_constraintStart_toStartOf="@+id/btn_profile"
+        app:layout_constraintTop_toBottomOf="@+id/btn_profile" />
+
+    <ImageView
+        android:id="@+id/btn_menu"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_menu2"
+        android:padding="4dp"
+        android:src="@drawable/baseline_format_list_bulleted_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Menu"
+        android:textColor="@color/material_dynamic_neutral20"
+        app:layout_constraintEnd_toEndOf="@+id/btn_menu"
+        app:layout_constraintStart_toStartOf="@+id/btn_menu"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
