@@ -35,6 +35,18 @@ class PemilihanActivity : AppCompatActivity() {
                 startActivity(Intent(this@PemilihanActivity, HomepageActivity::class.java))
                 finish()
             }
+            menuLatihan1.setOnClickListener {
+                val intent = Intent(this@PemilihanActivity, PreLatihanActivity::class.java)
+                intent.putExtra("origin", "pemilihan")
+                intent.putExtra("title", "LATIHAN 1 ALGORITMA PEMILIHAN")
+                startActivity(intent)
+            }
+            menuLatihan2.setOnClickListener {
+                val intent = Intent(this@PemilihanActivity, PreLatihanActivity::class.java)
+                intent.putExtra("origin", "pemilihan")
+                intent.putExtra("title", "LATIHAN 2 ALGORITMA PEMILIHAN")
+                startActivity(intent)
+            }
         }
     }
 

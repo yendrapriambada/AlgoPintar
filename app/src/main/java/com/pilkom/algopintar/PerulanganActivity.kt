@@ -36,6 +36,18 @@ class PerulanganActivity : AppCompatActivity() {
                 startActivity(Intent(this@PerulanganActivity, HomepageActivity::class.java))
                 finish()
             }
+            menuLatihan1.setOnClickListener {
+                val intent = Intent(this@PerulanganActivity, PreLatihanActivity::class.java)
+                intent.putExtra("origin", "perulangan")
+                intent.putExtra("title", "LATIHAN 1 ALGORITMA PERULANGAN")
+                startActivity(intent)
+            }
+            menuLatihan2.setOnClickListener {
+                val intent = Intent(this@PerulanganActivity, PreLatihanActivity::class.java)
+                intent.putExtra("origin", "perulangan")
+                intent.putExtra("title", "LATIHAN 2 ALGORITMA PERULANGAN")
+                startActivity(intent)
+            }
         }
     }
 
