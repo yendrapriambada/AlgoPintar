@@ -1,11 +1,13 @@
 package com.pilkom.algopintar
 
-import android.app.Activity
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.pilkom.algopintar.databinding.ActivityPerulanganBinding
+
 
 class PerulanganActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPerulanganBinding
@@ -14,9 +16,26 @@ class PerulanganActivity : AppCompatActivity() {
         binding = ActivityPerulanganBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.include.btnBack.setOnClickListener {
-            startActivity(Intent(this@PerulanganActivity, HomepageActivity::class.java))
-            finish()
+        binding.apply {
+            include.btnBack.setOnClickListener {
+                startActivity(Intent(this@PerulanganActivity, HomepageActivity::class.java))
+                finish()
+            }
+            include.btnKeluar.setOnClickListener {
+                AlertDialog.Builder(this@PerulanganActivity)
+                    .setIcon(R.drawable.ic_dialog_alert)
+                    .setTitle("Tutup Aplikasi")
+                    .setMessage("Apakah anda yakin ingin keluar dari aplikasi?")
+                    .setPositiveButton("Ya") { _, _ ->
+                        finishAffinity()
+                    }
+                    .setNegativeButton("Tidak", null)
+                    .show()
+            }
+            include.btnHome.setOnClickListener {
+                startActivity(Intent(this@PerulanganActivity, HomepageActivity::class.java))
+                finish()
+            }
         }
     }
 
