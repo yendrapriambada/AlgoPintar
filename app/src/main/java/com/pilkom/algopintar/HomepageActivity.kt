@@ -27,6 +27,9 @@ class HomepageActivity : AppCompatActivity() {
                 startActivity(Intent(this@HomepageActivity, PerulanganActivity::class.java))
                 finish()
             }
+//            include.btnMenu.setOnClickListener {
+//                binding.include.motionLayout.start()
+//            }
         }
     }
 

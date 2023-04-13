@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B2ECEB">
+    android:background="#B2ECEB"
+    app:layoutDescription="@xml/backdrop_scene">
 
     <ImageView
         android:id="@+id/img_backdrop"
@@ -18,7 +19,7 @@
         android:src="@drawable/backdrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_keluar"
-        app:layout_constraintStart_toEndOf="@+id/btn_setting"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -37,7 +38,7 @@
         android:id="@+id/btn_setting"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_menu"
         android:padding="4dp"
         android:src="@drawable/baseline_settings_24"
@@ -85,7 +86,7 @@
         android:id="@+id/btn_keluar"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bg_menu_exit"
         android:padding="4dp"
@@ -111,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Setting"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_setting"
         app:layout_constraintStart_toStartOf="@+id/btn_setting"
@@ -122,6 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Keluar"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_keluar"
         app:layout_constraintStart_toStartOf="@+id/btn_keluar"
@@ -134,6 +137,7 @@
         android:layout_marginTop="2dp"
         android:gravity="center"
         android:text="Home"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_home"
         app:layout_constraintStart_toStartOf="@+id/btn_home"
@@ -145,6 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Petunjuk"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_petunjuk"
         app:layout_constraintStart_toStartOf="@+id/btn_petunjuk"
@@ -156,6 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Kompetensi"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_kompetensi"
         app:layout_constraintStart_toStartOf="@+id/btn_kompetensi"
@@ -167,6 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Profil"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_profile"
         app:layout_constraintStart_toStartOf="@+id/btn_profile"
@@ -177,12 +184,13 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_menu2"
-        android:padding="4dp"
+        android:padding="6dp"
         android:src="@drawable/baseline_format_list_bulleted_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tv_menu"
@@ -190,9 +198,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Menu"
+        android:textSize="13sp"
         android:textColor="@color/material_dynamic_neutral20"
         app:layout_constraintEnd_toEndOf="@+id/btn_menu"
         app:layout_constraintStart_toStartOf="@+id/btn_menu"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
